@@ -96,11 +96,10 @@ class RegistrationForm extends Component {
       },
     };
     const prefixSelector = getFieldDecorator('prefix', {
-      initialValue: '86',
+      initialValue: '1',
     })(
       <Select style={{ width: 70 }}>
-        <Option value="86">+86</Option>
-        <Option value="87">+87</Option>
+        <Option value="1">+1</Option>
       </Select>
     );
 
