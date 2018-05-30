@@ -5,7 +5,7 @@ class Home extends Component {
     render() {
         return (
             <Row style={{margin: "4rem"}}>
-            <Col offset={10} span={6}>
+            <Col offset={8} span={8}>
                 <ContatoForm />
             </Col>
             </Row>

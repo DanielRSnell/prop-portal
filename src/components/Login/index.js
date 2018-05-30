@@ -37,7 +37,7 @@ class Contato extends React.Component {
           <Button type="primary" htmlType="submit" className="login-form-button">
             Log in
           </Button>
-          {' '}Or <Link to="/register">register now!</Link>
+          {' '}Or <Link to="/register">Register Now!</Link>
         </FormItem>
       </Form>
     );
