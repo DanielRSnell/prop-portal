@@ -5,7 +5,7 @@ import WrappedRegistrationForm from '../components/register'
 class Register extends Component {
     render() {
         return (
-        <Row style={{margin: 50}}>
+        <Row style={{marginTop: 50}} align="middle">
             <Col offset={6} span={8}>
             <WrappedRegistrationForm />
             </Col>
