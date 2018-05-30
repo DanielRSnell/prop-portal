@@ -4,8 +4,8 @@ import { Row, Col } from 'antd';
 class Home extends Component {
     render() {
         return (
-            <Row style={{marginTop: 50}} align="middle">
-            <Col offset={8} span={8}>
+            <Row type="flex" style={{marginTop: 200}} justify="space-around">
+            <Col span={6}>
                 <ContatoForm />
             </Col>
             </Row>
