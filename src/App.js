@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
 import { Layout, Row } from 'antd';
 import MainNav from './components/nav'
 import home from './pages/home';
 import Register from './pages/register';
 import example from './pages/example';
+import Request from './pages/request';
+
+// Dummy Page
+import ExampleLinks from './components/example';
+
+const { Footer } = Layout;
 
 class App extends Component {
   render() {
@@ -16,6 +22,8 @@ class App extends Component {
       <Route exact={true} path="/" component={home} />
       <Route exact={true} path="/register" component={Register} />
       <Route exact={true} path="/example" component={example} />
+      <Route exact={true} path="/maintenance-request" component={Request} />
+      <ExampleLinks />
       </Row>
       </BrowserRouter>
       </Layout>
