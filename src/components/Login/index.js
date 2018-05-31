@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { Form, Icon, Input, Button } from 'antd';
+import { Form, Icon, Input, Button, Row, Col } from 'antd';
 const FormItem = Form.Item;
 
 class Contato extends React.Component {
@@ -33,11 +33,18 @@ class Contato extends React.Component {
           )}
         </FormItem>
         <FormItem>
- 
+          <Row type="flex" >
+          <Col span={4}>
           <Button type="primary" htmlType="submit" className="login-form-button">
             Log in
           </Button>
-          {' '}Or <Link to="/register">Register Now!</Link>
+          </Col>
+          <Col span={4} offset={2}>
+          <Button className="register-now-button" style={{paddingLeft: 10}}>
+            Register
+          </Button>
+          </Col>
+          </Row>
         </FormItem>
       </Form>
     );

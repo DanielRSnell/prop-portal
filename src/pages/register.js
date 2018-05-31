@@ -5,7 +5,7 @@ import WrappedRegistrationForm from '../components/register'
 class Register extends Component {
     render() {
         return (
-        <Row type="flex" style={{marginTop: 50}} justify="space-around">
+        <Row type="flex" style={{marginTop: 100}} justify="space-around">
             <Col span={8}>
             <WrappedRegistrationForm />
             </Col>
