@@ -12,19 +12,19 @@ class Maint extends Component {
             <h2>Maintenance Request</h2>
             </Row>
             <Row className="text__header" style={{marginTop: 25}}>
-            <Input placeholder="Name Your Request" />
+            <Input size="large" placeholder="Name Your Request" />
             </Row>
             <Row className="text__header" style={{marginTop: 25}}>
-            <Input placeholder="Email Address" />
+            <Input size="large" placeholder="Email Address" />
             </Row>
             <Row className="text__header" style={{marginTop: 25}}>
-            <Input placeholder="Property Address" />
+            <Input size="large" placeholder="Property Address" />
             </Row>
             <Row className="text__area" style={{marginTop: 25}}>
-            <TextArea placeholder="Describe the issue here"/>
+            <TextArea size="large" placeholder="Describe the issue here"/>
             </Row>
             <Row className="text__button" style={{marginTop: 35}}>
-            <Button type="primary">Submit Request</Button>
+            <Button type="primary" size="large">Submit Request</Button>
             </Row>
             </Col>
             </Row>

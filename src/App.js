@@ -18,7 +18,6 @@ class App extends Component {
       <Layout style={{height: "100vh"}}>
       <BrowserRouter>
       <Row>
-      <MainNav />
       <Route exact={true} path="/" component={home} />
       <Route exact={true} path="/register" component={Register} />
       <Route exact={true} path="/example" component={example} />

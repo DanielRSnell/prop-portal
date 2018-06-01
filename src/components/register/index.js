@@ -1,32 +1,9 @@
 import React, { Component } from 'react';
-import { Form, Input, Tooltip, Icon, Cascader, Select, Row, Col, Checkbox, Button, AutoComplete } from 'antd';
+import { Link } from 'react-router-dom';
+import { Form, Input, Icon, Select, Row, Col, Checkbox, Button, AutoComplete } from 'antd';
 const FormItem = Form.Item;
 const Option = Select.Option;
 const AutoCompleteOption = AutoComplete.Option;
-
-const residences = [{
-  value: 'zhejiang',
-  label: 'Zhejiang',
-  children: [{
-    value: 'hangzhou',
-    label: 'Hangzhou',
-    children: [{
-      value: 'xihu',
-      label: 'West Lake',
-    }],
-  }],
-}, {
-  value: 'jiangsu',
-  label: 'Jiangsu',
-  children: [{
-    value: 'nanjing',
-    label: 'Nanjing',
-    children: [{
-      value: 'zhonghuamen',
-      label: 'Zhong Hua Men',
-    }],
-  }],
-}];
 
 class RegistrationForm extends Component {
   state = {
@@ -109,10 +86,7 @@ class RegistrationForm extends Component {
 
     return (
       <Form onSubmit={this.handleSubmit}>
-        <FormItem
-          {...formItemLayout}
-          label="E-mail"
-        >
+        <FormItem>
           {getFieldDecorator('email', {
             rules: [{
               type: 'email', message: 'The input is not valid E-mail!',
@@ -120,13 +94,10 @@ class RegistrationForm extends Component {
               required: true, message: 'Please input your E-mail!',
             }],
           })(
-            <Input />
+            <Input size="large"  prefix={<Icon type="mail" style={{ fontSize: 13 }} />} placeholder="Email Address" />
           )}
         </FormItem>
-        <FormItem
-          {...formItemLayout}
-          label="Password"
-        >
+        <FormItem>
           {getFieldDecorator('password', {
             rules: [{
               required: true, message: 'Please input your password!',
@@ -134,13 +105,10 @@ class RegistrationForm extends Component {
               validator: this.validateToNextPassword,
             }],
           })(
-            <Input type="password" />
+            <Input size="large"  prefix={<Icon type="lock" style={{ fontSize: 13 }} />} placeholder="Password" type="password" />
           )}
         </FormItem>
-        <FormItem
-          {...formItemLayout}
-          label="Confirm Password"
-        >
+        <FormItem>
           {getFieldDecorator('confirm', {
             rules: [{
               required: true, message: 'Please confirm your password!',
@@ -148,46 +116,30 @@ class RegistrationForm extends Component {
               validator: this.compareToFirstPassword,
             }],
           })(
-            <Input type="password" onBlur={this.handleConfirmBlur} />
+            <Input size="large"  prefix={<Icon type="setting" style={{ fontSize: 13 }} />} placeholder="Confirm Password" type="password" onBlur={this.handleConfirmBlur} />
           )}
         </FormItem>
-        <FormItem
-          {...formItemLayout}
-          label="Phone Number"
-        >
+        <FormItem>
           {getFieldDecorator('phone', {
             rules: [{ required: true, message: 'Please input your phone number!' }],
           })(
-            <Input addonBefore={prefixSelector} style={{ width: '100%' }} />
+            <Input size="large" placeholder="000-000-0000" addonBefore={prefixSelector} style={{ width: '100%' }} />
           )}
         </FormItem>
-        <FormItem
-          {...formItemLayout}
-          label="Captcha"
-          extra="We must make sure that your are a human."
-        >
-          <Row gutter={8}>
-            <Col span={12}>
-              {getFieldDecorator('captcha', {
-                rules: [{ required: true, message: 'Please input the captcha you got!' }],
-              })(
-                <Input />
-              )}
-            </Col>
-            <Col span={12}>
-              <Button>Get captcha</Button>
-            </Col>
-          </Row>
-        </FormItem>
-        <FormItem {...tailFormItemLayout}>
+        <FormItem>
           {getFieldDecorator('agreement', {
             valuePropName: 'checked',
           })(
             <Checkbox>I have read the <a href="">agreement</a></Checkbox>
           )}
         </FormItem>
-        <FormItem {...tailFormItemLayout}>
+        <FormItem>
           <Button type="primary" htmlType="submit">Register</Button>
+          <Link to={"/"}>
+          <Button htmlType="submit" className="login-form-button" style={{marginLeft: "1rem"}}>
+            Login
+          </Button>
+          </Link>
         </FormItem>
       </Form>
     );

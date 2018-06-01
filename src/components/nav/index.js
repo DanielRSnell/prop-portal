@@ -23,8 +23,8 @@ class MainNav extends Component {
         selectedKeys={[this.state.current]}
         mode="horizontal"
       >
-      <Row type="flex" justify="space-between">
-        <Col span={12} style={{paddingLeft: 10, paddingTop: 10, paddingBottom: 10}}>
+      <Row type="flex" style={{marginTop: ".5rem", marginBottom: ".5rem"}}>
+      <Col span={12} align="start" style={{marginLeft: "1rem"}}>
       <Menu.Item 
             key="logo"
 		    className="menu-logo">
@@ -32,13 +32,12 @@ class MainNav extends Component {
          <img className="logo" src={logo} alt="logo" style={LogoStyle} /> </Link>
         </Menu.Item>
         </Col>
-        <Col span={2} offset={8} style={{ paddingTop: 10, paddingBottom: 10}}>
+        <Col span={2} offset={7} align="end" style={{marginRight: "1rem"}}>
         <Menu.Item key="Login">
-        <Link to={"/"}><Button>LOGIN</Button></Link>
+        <Link to={"/"}><Button >LOGIN</Button></Link>
         </Menu.Item>
         </Col>
-
-        <Col span={2} style={{ paddingTop: 10, paddingBottom: 10}}>
+        <Col span={2} align="end" style={{marginRight: "1rem"}}> 
         <Menu.Item key="Register">
         <Link to={"/register"}><Button>REGISTER</Button></Link>
         </Menu.Item>

@@ -19,17 +19,17 @@ class Contato extends React.Component {
     return (
       <Form onSubmit={this.handleSubmit} className="login-form">
         <FormItem>
-          {getFieldDecorator('userName', {
-            rules: [{ required: true, message: 'Please input your username!' }],
+          {getFieldDecorator('Email Address', {
+            rules: [{ required: true, message: 'Please input your Email Address!' }],
           })(
-            <Input prefix={<Icon type="user" style={{ fontSize: 13 }} />} placeholder="Username" />
+            <Input size="large" prefix={<Icon type="user" style={{ fontSize: 13 }} />} placeholder="Email Address" />
           )}
         </FormItem>
         <FormItem>
           {getFieldDecorator('password', {
             rules: [{ required: true, message: 'Please input your Password!' }],
           })(
-            <Input prefix={<Icon type="lock" style={{ fontSize: 13 }} />} type="password" placeholder="Password" />
+            <Input size="large" prefix={<Icon type="lock" style={{ fontSize: 13 }} />} type="password" placeholder="Password" />
           )}
         </FormItem>
         <FormItem>
@@ -40,9 +40,11 @@ class Contato extends React.Component {
           </Button>
           </Col>
           <Col span={4} offset={2}>
+          <Link to={'/register'}>
           <Button className="register-now-button" style={{paddingLeft: 10}}>
             Register
           </Button>
+          </Link>
           </Col>
           </Row>
         </FormItem>
