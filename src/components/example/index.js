@@ -12,6 +12,9 @@ class ExampleLinks extends Component {
             <div style={{padding: 10}}>
             <Link to={"/upload"}>Document Uploader</Link>
             </div>
+            <div style={{padding: 10}}>
+            <Link to={"/profile/1"}>Basic Profile Example</Link>
+            </div>
             </Row>
         )
     }
