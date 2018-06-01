@@ -15,6 +15,7 @@ const { Footer } = Layout;
 
 class App extends Component {
   render() {
+    console.log(this.props)
     return (
       <Layout style={{height: "100vh"}}>
       <BrowserRouter>
