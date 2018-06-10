@@ -5,8 +5,8 @@ const { TextArea } = Input;
 
 const propStyles = {
     background: "white",
-    padding: "4%",
-    borderRadius: "10px",
+    padding: "2%",
+    borderRadius: "5px",
     boxShadow: "0 1px 5px rgba(0, 0, 0, 0.15)"
 }
 
