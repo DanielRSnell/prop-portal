@@ -11,8 +11,10 @@ import ProfilePage from './pages/profile';
 
 // Dummy Page
 import ExampleLinks from './components/example';
-
+import TestStuff from './test';
 const { Footer } = Layout;
+
+
 
 class App extends Component {
   render() {
@@ -27,6 +29,7 @@ class App extends Component {
       <Route exact={true} path="/maintenance-request" component={Request} />
       <Route exact={true} path="/upload" component={DocUpload} />
       <Route path="/profile/:id" component={ProfilePage} />
+      <Route exact={true} path="/test" component={TestStuff} />
       <ExampleLinks />
       </Row>
       </BrowserRouter>
